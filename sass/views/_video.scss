@@ -1,0 +1,25 @@
+.video {
+    text-align: center;
+    padding-bottom: 32px;
+    .title {
+        font-size: 56px;
+        font-weight: 600;
+        @include mobile {
+            font-size: 48px;
+        }
+        @include mobile-xs {
+            font-size: 32px;
+        }
+    }
+    .text {
+        color: $light-grey;
+        font-weight: 300;
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+    .video {
+        width: 100%;
+        height: 420px;
+    }
+}

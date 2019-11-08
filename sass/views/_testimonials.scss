@@ -1,0 +1,172 @@
+.testimonials {
+    width: 100%;
+    height: 512px;
+    background-image: url('../assets/img/bg-curves@2x.png');
+    background-size: auto 100%;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+    @include desktop-lg {
+        background-size: auto 100%;
+    }
+    @include mobile {
+        background-size: cover;
+    }
+
+    &-carousel {
+        width: 80%;
+        min-height: 320px;
+        position: relative;
+        box-shadow: 0 0 16px rgba($color: #000000, $alpha: 0.2);
+        &-card {
+            background-color: $white;
+            padding: 64px;
+            width: 100%;
+            min-height: 320px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &-text {
+                position: relative;
+                font-weight: 300;
+                font-style: italic;
+                z-index: 999;
+                &::after {
+                    content: " ";
+                    width: 50px;
+                    height: 50px;
+                    background-image: url('../assets/icons/quote.svg');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    position: absolute;
+                    right: 0;
+                    z-index: -1;
+                    @include mobile {
+                        width: 32px;
+                        height: 32px;
+                    }
+                    @include mobile-xs {
+                        bottom: 0;
+                    }
+                }
+                @include mobile {
+                    font-size: 14px;
+                }
+            }
+            &-profile {
+                display: flex;
+                align-items: center;
+                &-pic {
+                    width: 64px;
+                    height: 64px;
+                    border-radius: 50%;
+                    margin-right: 16px;
+                    @include mobile {
+                        width: 48px;
+                        height: 48px;
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                    }
+                }
+                &-data {
+                    .name {
+                        margin-bottom: 0;
+                        line-height: 1;
+                        font-weight: 500;
+                        @include mobile {
+                            font-size: 14px;
+                        }
+                    }
+                    .job {
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        color: $light-grey;
+                        @include mobile {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            @include mobile {
+                padding: 32px;
+            }
+        }
+        .slick-dots {
+            position: absolute;
+            display: block;
+            width: auto;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: left;
+            right: 64px;
+            bottom: 64px;
+            @include mobile {
+                right: 16px;
+                bottom: 20px;
+            }
+            .slick-active {
+                width: 32px;
+                @include mobile {
+                    width: 24px;
+                }
+            }
+            li {
+                width: 8px;
+                height: 8px;
+                margin-right: 8px;
+                transition: all .2s ease-in-out;
+                button {
+                    width: 12px;
+                    height: 12px;
+                    &::before {
+                        font-family: 'slick';
+                        font-size: 6px;
+                        line-height: 1;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 12px;
+                        height: 12px;
+                        content: '';
+                        text-align: center;
+                        opacity: .5;
+                        background-color: $light-grey;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        border-radius: 50%;
+                        transition: all .2s ease-in-out;
+                        @include mobile {
+                            width: 6px;
+                            height: 6px;
+                        }
+                    }
+                    @include mobile {
+                        width: 6px;
+                        height: 6px;
+                    }
+                }
+                @include mobile {
+                    width: 6px;
+                    height: 6px;
+                    margin-right: 6px;
+                }
+            }
+    
+            li.slick-active button::before {
+                opacity: .75;
+                background-color: $blue;
+                width: 32px;
+                border-radius: 64px;
+                @include mobile {
+                    width: 24px;
+                }
+            }
+        }
+    }
+}

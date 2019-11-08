@@ -1,0 +1,221 @@
+.banner {
+    width: 100%;
+    height: 512px;
+    background-color: rgba($color: $dark-grey, $alpha: 0.3);
+    background-image: url('../assets/img/banner-page@2x.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    position: relative;
+
+    .row {
+        height: 512px;
+    }
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: #fff;
+        padding: 32px 0;
+
+        @include mobile {
+            padding: 32px;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 300;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+        
+        .page-title {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 128px;
+            margin-bottom: 0;
+            line-height: 1;
+            @include mobile {
+                font-size: 64px;
+            }
+        }
+    }
+}
+
+.description-model {
+    padding: 128px 0;
+
+    @include mobile {
+        padding: 64px 0;
+    }
+
+    .title {
+        font-size: 48px;
+        text-align: right;
+        font-weight: 600;
+        text-transform: uppercase;
+        span {
+            font-size: 52px;
+        }
+        @include tablet {
+            text-align: right;
+            font-size: 32px;
+
+            span {
+                font-size: 48px;
+            }
+        }
+        @include mobile {
+            text-align: center;
+            font-size: 32px;
+
+            span {
+                font-size: 48px;
+            }
+        }
+    }
+
+    .text {
+        text-align: right;
+        font-weight: 300;
+        color: $grey;
+        margin-bottom: 0;
+        @include tablet {
+            font-size: 14px;
+        }
+        @include mobile {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.skills {
+    padding: 64px 0;
+    background-color: $red;
+    position: relative;
+    
+    &::before {
+        content: " ";
+        background-image: url('../assets/img/bg-red.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .col-md-4 {
+        &:nth-child(1) {
+            margin-bottom: 32px;
+        }
+        @include mobile {
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    .card {
+        min-height: 128px;
+        padding: 32px;
+        justify-content: center;
+        box-shadow: 0 0 16px rgba($color: #000000, $alpha: 0.1);
+        border: none;
+
+        .number {
+            font-weight: 600;
+            color: $red;
+            font-size: 48px;
+        }
+
+        .text {
+            margin-bottom: 0;
+            color: $grey;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+    }
+}
+
+.shifts {
+    padding: 64px 0;
+
+    .small-title {
+        color: $light-grey;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 600;
+        margin-bottom: 0;
+        @include tablet {
+            font-size: 12px;
+        }
+    }
+    .title {
+        font-weight: 600;
+        font-size: 56px;
+        color: $red;
+        text-transform: uppercase;
+        span {
+            color: $blue;
+        }
+        @include desktop-lg {
+            font-size: 48px;
+        }
+        @include tablet {
+            font-size: 40px;
+        }
+        @include mobile {
+            font-size: 40px;
+        }
+    }
+
+    .card {
+        padding: 32px;
+        border: none;
+        box-shadow: 0 0 16px rgba($color: #000000, $alpha: 0.1);
+
+        &-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            text-align: center;
+
+            &-item {
+                padding: 16px 0;
+                &:not(:last-child) {
+                    border-bottom: .1px solid rgba($color: $light-grey, $alpha: 0.5);
+                }
+                
+                &-hour {
+                    color: $blue;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                }
+
+                &-shift {
+                    color: $grey;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .img {
+        background-size: cover;
+        background-position: center;
+    }
+}

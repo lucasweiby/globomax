@@ -1,0 +1,131 @@
+.levels {
+    padding: 128px 0;
+    @include mobile {
+        padding: 64px 0;
+    }
+    .small-title {
+        color: $light-grey;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 600;
+    }
+    .main-title {
+        font-weight: 600;
+        font-size: 56px;
+        color: $red;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        @include tablet {
+            font-size: 12px;
+        }
+        span {
+            color: $blue;
+        }
+        @include desktop-lg {
+            font-size: 48px;
+        }
+        @include tablet {
+            font-size: 36px;
+        }
+        @include mobile {
+            font-size: 48px;
+        }
+    }
+    &-degree {
+        height: 256px;
+        @include mobile {
+            padding: 0 16px;
+            height: auto;
+        }
+        .img {
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/img/infantil@2x.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            @include mobile {
+                display: none;
+            }
+        }
+        .content {
+            width: 80%;
+            @include tablet {
+                width: 85%;
+                
+            }
+            @include mobile {
+                width: 100%;
+                padding: 16px;
+            }
+            .title {
+                margin-bottom: 0;
+                text-transform: uppercase;
+                font-weight: 600;
+                @include desktop-lg {
+                    font-size: 32px;
+                }
+                @include tablet {
+                    font-size: 24px;
+                }
+                @include mobile {
+                    font-size: 32px;
+                }
+                @include mobile {
+                    font-size: 24px;
+                }
+            }
+            .text {
+                margin-bottom: 0;
+                font-weight: 300;
+                color: $grey;
+                @include desktop-lg {
+                    font-size: 14px;
+                }
+                @include tablet {
+                    font-size: 14px;
+                }
+            }
+        }
+        &-content-right {
+            background-color: rgba($color: $light-blue, $alpha: .1);
+            position: relative;
+            text-align: left;
+            .content {
+                position: absolute;
+                bottom: 32px;
+                left: 32px;
+                @include mobile {
+                    position: relative;
+                    bottom: auto;
+                    left: auto;
+                }
+            }
+            @include mobile {
+                text-align: center;
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+        }
+        &-content-left {
+            background-color: rgba($color: $red, $alpha: .1);
+            position: relative;
+            text-align: right;
+            .content {
+                position: absolute;
+                bottom: 16px;
+                right: 20px;
+                @include mobile {
+                    position: relative;
+                    bottom: auto;
+                    right: auto;
+                }
+            }
+            @include mobile {
+                text-align: center;
+                padding-left: 0px !important;
+                padding-right: 0px !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,219 @@
+.footer {
+    padding: 64px 0;
+    background-color: $grey;
+    position: relative;
+
+    &::before {
+        content: " ";
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/img/pattern-2.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+
+    &-logo {
+        margin-bottom: 16px;
+        @include desktop-lg {
+            width: 200px;
+        }
+        @include tablet {
+            width: 200px;
+        }
+        @include mobile {
+            display: block;
+            margin: 0 auto 16px;
+        }
+    }
+
+    &-text {
+        margin-bottom: 16px;
+        color: $white;
+        font-weight: 300;
+        font-size: 14px;
+        @include tablet {
+            font-size: 12px;
+        }
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &-address {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        font-size: 14px;
+        color: $white;
+        font-weight: 300;
+        transition: all .2s ease;
+        &-item {
+            margin-bottom: 8px;
+            transition: all .2s ease;
+            &:hover {
+                transform: translateX(4px);
+                text-decoration: underline;
+            }
+        }
+        @include tablet {
+            font-size: 12px;
+        }
+        @include mobile {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    }
+
+    &-fa-title {
+        color: $light-grey;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 4px;
+        @include desktop-lg {
+            font-size: 12px;
+            margin-bottom: 0;
+            line-height: 1;   
+        }
+        @include tablet {
+            font-size: 10px;
+            line-height: 1;
+        }
+        @include mobile {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &-nav {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-top: 16px;
+        color: $white;
+        text-transform: uppercase;
+        &-item {
+            font-size: 20px;
+            font-weight: 600;
+            transition: all .2s ease;
+            &:hover {
+                transform: translateX(4px);
+            }
+            @include desktop-lg {
+                font-size: 16px;
+            }
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+        @include desktop-lg {
+            margin-top: 8px;   
+        }
+        @include mobile {
+            margin-top: 8px;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    }
+
+    &-hour {
+        margin-top: 16px;
+        @include desktop-lg {
+            margin-top: 8px;
+        }
+        @include mobile {
+            max-width: 90%;
+            display: block;
+            margin: 16px auto 32px;
+        }
+    }
+
+    &-horario {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0;
+        &:not(:last-child) {
+            border-bottom: 1px solid $white;
+        }
+        .dias, .hora {
+            margin-bottom: 0;
+            color: $white;
+            @include desktop-lg {
+                font-size: 16px;
+            }
+            @include tablet {
+                font-size: 16px;
+            }
+        }
+        .hora {
+            font-weight: 300;
+        }
+    }
+
+    &-copy {
+        margin-top: 16px;
+        color: $light-grey;
+        font-weight: 300;
+        @include desktop-lg {
+            font-size: 12px;
+        }
+        @include tablet {
+            font-size: 12px;
+            line-height: 1;
+        }
+        @include mobile {
+            text-align: center;
+        }
+
+        .social {
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 0;
+            &-item {
+                &:not(:last-child) {
+                    margin-right: 16px;
+                }
+            }
+            &-link {
+                color: $light-grey;
+                transition: all .2s ease;
+                &:hover {
+                    text-decoration: none;
+                    color: $white;
+                }
+            }
+        }
+
+        &-creditation {
+            display: flex;
+            justify-content: flex-end;
+            @include mobile {
+                justify-content: center;
+            }
+
+            .link {
+                color: $light-grey;
+                font-weight: 600;
+                transition: all .2s ease;
+                margin-left: 4px;
+                &:hover {
+                    text-decoration: none;
+                    color: $white;
+                }
+                @include desktop-lg {
+                    margin-left: 4px;
+                }
+                @include mobile {
+                    margin-left: 4px;
+                }
+            }
+        }
+    }
+}

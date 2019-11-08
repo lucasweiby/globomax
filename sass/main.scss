@@ -1,0 +1,89 @@
+@import '_variables';
+@import '_mixins';
+
+//Views
+@import 'views/nav';
+@import 'views/home';
+@import 'views/fa';
+@import 'views/about';
+@import 'views/numbers';
+@import 'views/levels';
+@import 'views/video';
+@import 'views/testimonials';
+@import 'views/footer';
+
+//Pages
+@import 'pages/modelo';
+
+body {
+    font-family: $galano;
+    font-weight: normal;
+}
+
+.blue {
+    color: $blue !important;
+}
+
+.red {
+    color: $red !important;
+}
+
+.btn-globomax {
+    padding: 16px 32px;
+    border: 2px solid $white;
+    border-radius: 64px;
+    color: $white;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+    transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    @include desktop-lg {
+        padding: 10px 20px;
+    }
+    @include mobile {
+        font-size: 14px;
+        padding: 8px 16px;
+        overflow: hidden !important;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+        i {
+            padding-left: 8px;
+        }
+    }
+
+    // &::after {
+    //     content: " ";
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: $white;
+    //     position: absolute;
+    //     top: 100%;
+    //     left: 0;
+    //     z-index: 0;
+    //     transition: all .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    // }
+    
+    &:hover {
+        text-decoration: none;
+        color: $red;
+        background-color: #fff;
+        // &::after {
+        //     top: 0;
+        // }
+        span {
+            i {
+                animation-name: bounce-right;
+                animation-direction: alternate;
+                animation-iteration-count: infinite;
+                animation-duration: .2s;
+                animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
+        }
+    }
+}
+
+@include bounce-right;
